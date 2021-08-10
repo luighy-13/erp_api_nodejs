@@ -1,24 +1,24 @@
-"use strict";
+'use strict'
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
-});
-exports.updateUser = exports.deleteUser = exports.showUsers = exports.createUser = void 0;
+})
+exports.updateUser = exports.deleteUser = exports.showUsers = exports.createUser = void 0
 
-var mysqlConnection = require('../config/database.js');
+const mysqlConnection = require('../config/database.js')
 
-var createUser = function createUser(req, res) {};
+const createUser = function createUser (req, res) {}
 
-exports.createUser = createUser;
+exports.createUser = createUser
 
-var showUsers = function showUsers(req, res) {};
+const showUsers = function showUsers (req, res) {}
 
-exports.showUsers = showUsers;
+exports.showUsers = showUsers
 
-var deleteUser = function deleteUser(req, res) {};
+const deleteUser = function deleteUser (req, res) {}
 
-exports.deleteUser = deleteUser;
+exports.deleteUser = deleteUser
 
-var updateUser = function updateUser(req, res) {};
+const updateUser = function updateUser (req, res) {}
 
-exports.updateUser = updateUser;
+exports.updateUser = updateUser

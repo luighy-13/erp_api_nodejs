@@ -1,22 +1,20 @@
-  
-const mysql = require('mysql');
 
-const mysqlConnection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'company',
-  multipleStatements: true
-});
-
-mysqlConnection.connect(function (err) {
-  if (err) {
-    console.log("error");
-    console.error(err);
-    return;
-  } else {
-    console.log('db is connected');
+import env from '../../env'
+const { Sequelize } = require('sequelize')
+const sequalize = new Sequelize(
+  env.database,
+  env.database_user,
+  env.database_password,
+  {
+    host: env.database_host,
+    dialect: env.database_type
   }
-});
+)
 
-module.exports = mysqlConnection;
+sequalize.authenticate().then(() => {
+  console.log('initialized database')
+}).catch(() => {
+  console.log('connection to the database could not be established ')
+})
+
+module.exports = sequalize
